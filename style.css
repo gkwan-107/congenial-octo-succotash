@@ -1,0 +1,150 @@
+:root {
+  --navy: #1b3358;
+  --navy-dark: #12213b;
+  --gold: #d4af37;
+  --bg: #f4f6fa;
+  --card-bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --naver-green: #03c75a;
+  --youtube-red: #ff0033;
+  --shopping-navy: #1b3358;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy) 220px, var(--bg) 220px, var(--bg) 100%);
+  color: var(--text);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 40px 28px 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 4px solid var(--gold);
+  object-fit: cover;
+  margin-top: -76px;
+  background: var(--navy);
+}
+
+.name {
+  margin: 16px 0 4px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.tagline {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.link-btn .icon {
+  font-size: 18px;
+}
+
+.link-btn.blog {
+  background: var(--naver-green);
+}
+
+.link-btn.youtube {
+  background: var(--youtube-red);
+}
+
+.link-btn.shopping {
+  background: var(--shopping-navy);
+}
+
+.link-group {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px dashed #e2e5eb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-title {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: left;
+}
+
+.disclosure {
+  margin: 24px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: 16px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.link-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.link-disabled::after {
+  content: "링크 준비중";
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
