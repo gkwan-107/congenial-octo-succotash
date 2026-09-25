@@ -5,6 +5,7 @@ const LINKS = {
   "coupang-partners": "https://partners.coupang.com/#affiliate/ws",
   "naver-shopping-connect": "https://brandconnect.naver.com/991798090653408/affiliate/products",
   "toss-shopping-share": "https://sharelink.toss.im/home",
+  "zoopzoop-shop": "https://zoopzoop.shop/mysite/",
 };
 
 document.querySelectorAll("[data-slot]").forEach((el) => {
