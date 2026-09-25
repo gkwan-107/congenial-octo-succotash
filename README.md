@@ -8,11 +8,11 @@
 
 ```js
 const LINKS = {
-  "naver-blog": "https://blog.naver.com/아이디",
-  "youtube": "https://www.youtube.com/@채널핸들",
-  "coupang-partners": "https://link.coupang.com/...",
-  "naver-shopping-connect": "https://...",
-  "toss-shopping-share": "https://...",
+  "naver-blog": "https://blog.naver.com/nanumtk72",
+  "youtube": "https://www.youtube.com/@TV-NanumThink",
+  "coupang-partners": "https://partners.coupang.com/#affiliate/ws",
+  "naver-shopping-connect": "https://brandconnect.naver.com/991798090653408/affiliate/products",
+  "toss-shopping-share": "https://sharelink.toss.im/home",
 };
 ```
 
