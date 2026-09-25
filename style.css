@@ -42,9 +42,16 @@ body {
   height: 96px;
   border-radius: 50%;
   border: 4px solid var(--gold);
-  object-fit: cover;
-  margin-top: -76px;
+  margin: -76px auto 0;
   background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: center;
 }
 
 .name {
