@@ -9,32 +9,77 @@
   --naver-green: #03c75a;
   --youtube-red: #ff0033;
   --shopping-navy: #1b3358;
+  --max-width: 960px;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 16px;
   font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, var(--navy) 0%, var(--navy) 220px, var(--bg) 220px, var(--bg) 100%);
+  background: var(--bg);
   color: var(--text);
 }
 
-.card {
-  width: 100%;
-  max-width: 420px;
-  background: var(--card-bg);
-  border-radius: 24px;
-  padding: 40px 28px 28px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+a {
+  color: inherit;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--gold);
+}
+
+/* Hero */
+
+.hero {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: #fff;
   text-align: center;
+  padding: 56px 20px 72px;
 }
 
 .avatar {
@@ -42,8 +87,8 @@ body {
   height: 96px;
   border-radius: 50%;
   border: 4px solid var(--gold);
-  margin: -76px auto 0;
-  background: var(--navy);
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
   display: flex;
   align-items: center;
@@ -54,84 +99,164 @@ body {
   text-align: center;
 }
 
-.name {
-  margin: 16px 0 4px;
-  font-size: 24px;
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
   font-weight: 900;
+  line-height: 1.4;
+  word-break: keep-all;
 }
 
-.tagline {
-  margin: 0 0 28px;
+.accent {
+  color: var(--gold);
+}
+
+.hero-sub {
+  margin: 0 auto 28px;
+  max-width: 480px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: var(--naver-green);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--youtube-red);
+  color: #fff;
+}
+
+/* Sections */
+
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 20px;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.section-sub {
+  margin: 0 0 32px;
+  text-align: center;
   color: var(--muted);
   font-size: 14px;
 }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.about p {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
 }
 
-.link-btn {
+.content {
+  background: var(--card-bg);
+  border-radius: 24px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.content-card,
+.shopping-card {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 18px;
-  border-radius: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--bg);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 15px;
-  color: #fff;
+  color: var(--text);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.link-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.content-card:hover,
+.shopping-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-.link-btn .icon {
-  font-size: 18px;
+.card-icon {
+  font-size: 28px;
 }
 
-.link-btn.blog {
-  background: var(--naver-green);
+.content-card h3,
+.shopping-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.link-btn.youtube {
-  background: var(--youtube-red);
+.content-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-.link-btn.shopping {
-  background: var(--shopping-navy);
-}
-
-.link-group {
+.card-link {
   margin-top: 8px;
-  padding-top: 16px;
-  border-top: 1px dashed #e2e5eb;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.group-title {
-  margin: 0 0 4px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--muted);
-  text-align: left;
+  color: var(--navy);
+}
+
+.shopping-card {
+  align-items: center;
+  text-align: center;
 }
 
 .disclosure {
-  margin: 24px 0 0;
+  margin: 28px 0 0;
+  text-align: center;
   font-size: 11px;
   line-height: 1.5;
   color: var(--muted);
 }
 
+/* Footer */
+
 .footer {
-  margin-top: 16px;
+  text-align: center;
+  padding: 24px 20px 40px;
 }
 
 .footer p {
@@ -139,6 +264,8 @@ body {
   font-size: 12px;
   color: var(--muted);
 }
+
+/* Disabled links (no URL configured yet) */
 
 .link-disabled {
   opacity: 0.45;
@@ -148,10 +275,9 @@ body {
 
 .link-disabled::after {
   content: "링크 준비중";
-  margin-left: auto;
   font-size: 11px;
   font-weight: 400;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.1);
   padding: 2px 8px;
   border-radius: 999px;
 }

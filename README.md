@@ -1,6 +1,7 @@
-# 나눔 씽크 링크 허브
+# 나눔 씽크 홈페이지
 
-네이버 블로그 · 유튜브 · 쇼핑커넥트(제휴 마케팅) 링크를 한곳에 모아 보여주는 정적 홈페이지입니다.
+경제 · 재테크 정보를 전하는 "나눔 씽크"의 랜딩페이지입니다. 소개, 블로그/유튜브 콘텐츠 안내,
+추천 쇼핑(제휴 마케팅) 링크 섹션으로 구성되어 있습니다.
 
 ## 링크 연결하기
 
@@ -28,5 +29,7 @@ python3 -m http.server 8000
 
 ## 배포
 
-GitHub Pages, Netlify, Vercel 등 정적 호스팅 어디에든 그대로 올리면 됩니다.
-GitHub Pages를 쓴다면 저장소 Settings → Pages에서 브랜치를 지정하기만 하면 됩니다.
+저장소 기본 브랜치(`claude/brave-faraday-i0m0wu`)에 푸시되면 `.github/workflows/deploy-pages.yml`이
+자동으로 GitHub Pages에 배포합니다. 별도 빌드 없이 정적 파일 그대로 서빙됩니다.
+
+배포 주소: https://gkwan-107.github.io/congenial-octo-succotash/

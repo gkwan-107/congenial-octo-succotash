@@ -3,59 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나눔 씽크 | 블로그 · 유튜브 · 쇼핑 링크 모음</title>
-<meta name="description" content="나눔 씽크의 네이버 블로그, 유튜브, 쇼핑커넥트 링크를 한곳에서 만나보세요.">
+<title>나눔 씽크 | 경제 · 재테크 정보 허브</title>
+<meta name="description" content="나눔 씽크의 네이버 블로그, 유튜브, 추천 쇼핑 링크를 한곳에서 만나보세요. 경제 · 재테크 정보를 쉽고 친절하게 나눕니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<main class="card">
-  <div class="avatar" role="img" aria-label="나눔 씽크 프로필">나눔<br>씽크</div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">나눔 씽크</a>
+    <nav class="nav">
+      <a href="#about">소개</a>
+      <a href="#content">콘텐츠</a>
+      <a href="#shopping">추천 쇼핑</a>
+    </nav>
+  </div>
+</header>
 
-  <h1 class="name">나눔 씽크</h1>
-  <p class="tagline">경제 · 재테크 정보를 나눔니다 💰</p>
+<main id="top">
 
-  <nav class="links" aria-label="바로가기 링크">
+  <section class="hero">
+    <div class="avatar" role="img" aria-label="나눔 씽크 프로필">나눔<br>씽크</div>
+    <h1>경제 · 재테크, <span class="accent">쉽고 친절하게</span> 나눕니다</h1>
+    <p class="hero-sub">누구나 이해할 수 있는 재테크 정보와 절약 꿀팁을 블로그와 유튜브로 전해드려요.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#" data-slot="naver-blog" target="_blank" rel="noopener noreferrer">📝 블로그 보러가기</a>
+      <a class="btn btn-secondary" href="#" data-slot="youtube" target="_blank" rel="noopener noreferrer">▶️ 유튜브 구독하기</a>
+    </div>
+  </section>
 
-    <a class="link-btn blog" href="#" data-slot="naver-blog" target="_blank" rel="noopener noreferrer">
-      <span class="icon">📝</span>
-      <span class="label">네이버 블로그 방문하기</span>
-    </a>
+  <section id="about" class="section about">
+    <h2>나눔 씽크 소개</h2>
+    <p>
+      "나눔 씽크"는 경제·재테크 정보를 쉽고 친절하게 풀어 나누는 채널입니다.
+      복잡한 금융 용어 대신 생활 속에서 바로 써먹을 수 있는 팁 위주로,
+      네이버 블로그와 유튜브를 통해 꾸준히 콘텐츠를 전해드리고 있어요.
+    </p>
+  </section>
 
-    <a class="link-btn youtube" href="#" data-slot="youtube" target="_blank" rel="noopener noreferrer">
-      <span class="icon">▶️</span>
-      <span class="label">유튜브 채널 구독하기</span>
-    </a>
-
-    <div class="link-group">
-      <p class="group-title">🛒 쇼핑 커넥트</p>
-
-      <a class="link-btn shopping" href="#" data-slot="coupang-partners" target="_blank" rel="noopener noreferrer sponsored">
-        <span class="icon">🛍️</span>
-        <span class="label">쿠팡파트너스</span>
+  <section id="content" class="section content">
+    <h2>최신 콘텐츠</h2>
+    <div class="card-grid">
+      <a class="content-card" href="#" data-slot="naver-blog" target="_blank" rel="noopener noreferrer">
+        <span class="card-icon blog-icon">📝</span>
+        <h3>네이버 블로그</h3>
+        <p>재테크 정보, 절약 팁, 생활 경제 이야기를 글로 정리해서 전해드려요.</p>
+        <span class="card-link">블로그 방문하기 →</span>
       </a>
-
-      <a class="link-btn shopping" href="#" data-slot="naver-shopping-connect" target="_blank" rel="noopener noreferrer sponsored">
-        <span class="icon">🛍️</span>
-        <span class="label">네이버 쇼핑커넥트</span>
-      </a>
-
-      <a class="link-btn shopping" href="#" data-slot="toss-shopping-share" target="_blank" rel="noopener noreferrer sponsored">
-        <span class="icon">🛍️</span>
-        <span class="label">토스 쇼핑 쉐어링크</span>
+      <a class="content-card" href="#" data-slot="youtube" target="_blank" rel="noopener noreferrer">
+        <span class="card-icon youtube-icon">▶️</span>
+        <h3>유튜브 채널</h3>
+        <p>영상과 쇼츠로 더 쉽고 빠르게 만나는 경제 · 재테크 콘텐츠예요.</p>
+        <span class="card-link">채널 구독하기 →</span>
       </a>
     </div>
+  </section>
 
-  </nav>
+  <section id="shopping" class="section shopping">
+    <h2>🛒 추천 쇼핑 링크</h2>
+    <p class="section-sub">직접 써보고 좋았던 제품과 혜택 좋은 채널만 모았어요.</p>
+    <div class="card-grid">
+      <a class="shopping-card" href="#" data-slot="coupang-partners" target="_blank" rel="noopener noreferrer sponsored">
+        <span class="card-icon">🛍️</span>
+        <h3>쿠팡파트너스</h3>
+        <span class="card-link">바로가기 →</span>
+      </a>
+      <a class="shopping-card" href="#" data-slot="naver-shopping-connect" target="_blank" rel="noopener noreferrer sponsored">
+        <span class="card-icon">🛍️</span>
+        <h3>네이버 쇼핑커넥트</h3>
+        <span class="card-link">바로가기 →</span>
+      </a>
+      <a class="shopping-card" href="#" data-slot="toss-shopping-share" target="_blank" rel="noopener noreferrer sponsored">
+        <span class="card-icon">🛍️</span>
+        <h3>토스 쇼핑 쉐어링크</h3>
+        <span class="card-link">바로가기 →</span>
+      </a>
+    </div>
+    <p class="disclosure">이 페이지의 일부 링크는 제휴 마케팅 링크이며, 이를 통해 구매 시 일정 수수료를 받을 수 있습니다.</p>
+  </section>
 
-  <p class="disclosure">이 페이지의 일부 링크는 제휴 마케팅 링크이며, 이를 통해 구매 시 일정 수수료를 받을 수 있습니다.</p>
-
-  <footer class="footer">
-    <p>© <span id="year"></span> 나눔 씽크. All rights reserved.</p>
-  </footer>
 </main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> 나눔 씽크. All rights reserved.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
