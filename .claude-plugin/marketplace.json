@@ -1,0 +1,16 @@
+{
+  "name": "nanumthink-marketplace",
+  "owner": {
+    "name": "gkwan-107",
+    "email": "gkwan107@gmail.com"
+  },
+  "description": "나눔 씽크 콘텐츠 운영 에이전트를 배포하는 마켓플레이스",
+  "plugins": [
+    {
+      "name": "nanumthink-content-ops",
+      "source": "./",
+      "description": "나눔 씽크 경제·재테크 블로그/유튜브 콘텐츠 제작 에이전트 모음 (네이버 블로그 글쓰기, 이미지 생성, 애드센스/SEO 점검, 유튜브 쇼츠 자막 게시)",
+      "version": "0.1.0"
+    }
+  ]
+}

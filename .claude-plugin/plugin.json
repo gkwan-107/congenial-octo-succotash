@@ -1,0 +1,19 @@
+{
+  "name": "nanumthink-content-ops",
+  "displayName": "Nanum Think Content Ops",
+  "version": "0.1.0",
+  "description": "나눔 씽크 경제·재테크 블로그/유튜브 콘텐츠 제작 에이전트 모음 (네이버 블로그 글쓰기, 이미지 생성, 애드센스/SEO 점검, 유튜브 쇼츠 자막 게시)",
+  "author": {
+    "name": "gkwan-107",
+    "email": "gkwan107@gmail.com"
+  },
+  "homepage": "https://github.com/gkwan-107/congenial-octo-succotash",
+  "repository": "https://github.com/gkwan-107/congenial-octo-succotash",
+  "keywords": [
+    "naver-blog",
+    "content-ops",
+    "seo",
+    "youtube-shorts",
+    "agents"
+  ]
+}
