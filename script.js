@@ -6,6 +6,9 @@ const LINKS = {
   "naver-shopping-connect": "https://brandconnect.naver.com/991798090653408/affiliate/products",
   "toss-shopping-share": "https://sharelink.toss.im/home",
   "zoopzoop-shop": "https://zoopzoop.shop/mysite/",
+"google-blog-inside-korea": "https://jkw0107kk.blogspot.com",
+"google-blog-ilsang-shopping": "https://ilsangshopping.blogspot.com",
+"youtube-gachi-ai": "https://www.youtube.com/@gachi_jitneun_ai",
 };
 
 document.querySelectorAll("[data-slot]").forEach((el) => {
