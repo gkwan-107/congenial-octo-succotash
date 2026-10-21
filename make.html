@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이미지·영상 만들기 | 나눔 씽크</title>
+<style>
+:root{--bg:#F1F7FF;--card:#fff;--ink:#183153;--sub:#5b6b82;--accent:#3977F6;--soft:#CFE1FE;--line:#dbe6f6}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1a2b;--card:#16243a;--ink:#e8eef9;--sub:#9db0cc;--accent:#6b9bff;--soft:#233a5e;--line:#2a3f60}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;line-height:1.6}
+header{background:#183153;color:#fff;padding:14px 16px}
+header .in{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+header a{color:#fff;text-decoration:none;font-weight:700}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.6rem;margin:0 0 6px}
+.lead{color:var(--sub);margin:0 0 18px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 16px;border-radius:999px;cursor:pointer;font:inherit;font-weight:600}
+.tab[aria-selected=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.panel.on{display:block}
+.meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:.92rem;color:var(--sub);margin-bottom:10px}
+.meta a{color:var(--accent);font-weight:600;text-decoration:none}
+iframe{width:100%;height:900px;border:0;border-radius:10px;background:#fff}
+.note{background:var(--soft);border-radius:12px;padding:14px 16px;margin-top:18px;font-size:.95rem}
+.note ul{margin:6px 0 0;padding-left:18px}
+.tips{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.tips code{display:block;background:var(--bg);padding:8px 10px;border-radius:8px;margin:6px 0;word-break:break-word;cursor:pointer}
+.copied{color:var(--accent);font-size:.85rem}
+</style>
+</head>
+<body>
+<header><div class="in"><a href="./">나눔 씽크</a><a href="./">← 홈으로</a></div></header>
+<main>
+  <h1>🎬 이미지·영상 만들기</h1>
+  <p class="lead">설명을 입력하면 AI가 이미지와 영상을 만들어 줍니다. 아래 탭을 눌러 바로 사용하세요.</p>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-p="img">이미지 만들기</button>
+    <button class="tab" role="tab" aria-selected="false" data-p="vid">영상 만들기</button>
+    <button class="tab" role="tab" aria-selected="false" data-p="i2v">이미지 → 영상</button>
+  </div>
+
+  <section class="panel on" id="img">
+    <div class="meta"><span>FLUX.1-schnell · 글로 그림 만들기 (4단계로 빠르게 생성)</span>
+      <a href="https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell" target="_blank" rel="noopener">새 창에서 열기 ↗</a></div>
+    <iframe data-src="https://black-forest-labs-flux-1-schnell.hf.space" title="이미지 만들기" loading="lazy" allow="clipboard-write"></iframe>
+  </section>
+
+  <section class="panel" id="vid">
+    <div class="meta"><span>LTX-Video · 글로 짧은 영상 만들기</span>
+      <a href="https://huggingface.co/spaces/Lightricks/ltx-video-distilled" target="_blank" rel="noopener">새 창에서 열기 ↗</a></div>
+    <iframe data-src="https://lightricks-ltx-video-distilled.hf.space" title="영상 만들기" allow="clipboard-write"></iframe>
+  </section>
+
+  <section class="panel" id="i2v">
+    <div class="meta"><span>Wan 2.2 Lightning · 사진 한 장을 움직이는 영상으로</span>
+      <a href="https://huggingface.co/spaces/Saravutw/WAN2.2_I2V_LIGHTNING_4-8step_custom" target="_blank" rel="noopener">새 창에서 열기 ↗</a></div>
+    <iframe data-src="https://saravutw-wan2-2-i2v-lightning-4-8step-custom.hf.space" title="이미지를 영상으로" allow="clipboard-write"></iframe>
+  </section>
+
+  <div class="tips">
+    <strong>설명(프롬프트)은 영어가 가장 잘 먹힙니다.</strong> 눌러서 복사한 뒤 입력창에 붙여 넣고 고쳐 쓰세요. <span class="copied" id="cp"></span>
+    <code data-c>A clean flat illustration of a piggy bank with coins, soft blue background, minimal, finance blog thumbnail style</code>
+    <code data-c>A calm cinematic shot of Seoul city skyline at sunrise, slow camera push-in, soft golden light</code>
+    <code data-c>A person calculating savings at a desk with a laptop, warm natural light, slow gentle camera movement</code>
+  </div>
+
+  <div class="tips"><strong>상품 광고 이미지가 필요하다면</strong> → <a href="https://nanum-workroom.gkwan107.chatgpt.site/product-ad" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">상품 광고 만들기 ↗</a></div>
+
+  <div class="note"><strong>알아두세요</strong>
+    <ul>
+      <li>무료 공용 서버라서 사람이 몰리면 대기하거나, 하루 사용량(GPU 할당)을 넘으면 잠시 막힐 수 있습니다. 막히면 "새 창에서 열기"로 쓰거나 시간을 두고 다시 시도하세요.</li>
+      <li>만든 결과물은 저장해 두세요. 서버에 계속 남지 않습니다.</li>
+      <li>상업적으로 쓰기 전에 각 프로그램 페이지에서 이용 조건(라이선스)을 꼭 확인하세요.</li>
+    </ul>
+  </div>
+</main>
+<script>
+(function(){
+  function load(p){var f=p.querySelector('iframe');if(f&&!f.src){f.src=f.dataset.src;}}
+  var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});
+    panels.forEach(function(p){p.classList.toggle('on',p.id===t.dataset.p)});
+    load(document.getElementById(t.dataset.p));
+  })});
+  load(document.getElementById('img'));
+  document.querySelectorAll('[data-c]').forEach(function(c){c.addEventListener('click',function(){
+    var s=document.getElementById('cp');
+    try{navigator.clipboard.writeText(c.textContent).then(function(){s.textContent='복사됨';setTimeout(function(){s.textContent=''},1500)})}catch(e){}
+  })});
+})();
+</script>
+</body>
+</html>
