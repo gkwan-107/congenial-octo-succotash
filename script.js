@@ -8,6 +8,7 @@ const LINKS = {
   "zoopzoop-shop": "https://zoopzoop.shop/mysite/",
 "google-blog-inside-korea": "https://jkw0107kk.blogspot.com",
 "google-blog-ilsang-shopping": "https://ilsangshopping.blogspot.com",
+"wordpress-jipnotelab": "https://jipnotelab.kr",
 "youtube-gachi-ai": "https://www.youtube.com/@gachi_jitneun_ai",
 };
 
